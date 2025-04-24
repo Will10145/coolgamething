@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Launcher</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .c-button {
+      min-width: 300px;
+      font-family: 'Trebuchet MS', sans-serif;
+      appearance: none;
+      border: 0;
+      border-radius: 10px;
+      background: #4caf50;
+      color: #fff;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .c-button:hover {
+      background: #45a049;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .c-button:focus {
+      outline: none;
+      box-shadow: 0 0 0 4px #cbd6ee;
+    }
+  </style>
+</head>
+<body>
+  <h1>Game Launcher</h1>
+  <button id="button1" class="c-button">PLAY GAME 1 (Time Shooter 2)</button>
+  <button id="button2" class="c-button">PLAY GAME 2 (Time Shooter 3)</button>
+  <button id="button3" class="c-button">PLAY GAME 3 (Gunspin)</button>
+  <button id="button4" class="c-button">PLAY GAME 4 (ShellShockers)</button>
+  <script>
+    const url1 = "https://VCio3KwNlDSBTVWkCKDi4Ojt-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/sk1bx/element@1dd0b99d2004b84795f2745a5eb3468deb1c38a4/ts2.xml&container=ig";
+    const url2 = "https://AeAjHAHiVpRkwZeZZbsZn9Fv-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/sk1bx/version@0d8fb9c7430567ed0900902593eee6ba2ba8d297/ts3.xml&container=ig";
+    const url3 = "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/RobiFet/workflow@60b41ef8c9123ae41b86bf04c9b39e1a5713aaa9/bin/gs.xml&container=ig";
+    const url4 = "https://geometry.monster";
+
+    let win1, win2, win3, win4;
+
+    function openGame(url, winRefName) {
+      if (window[winRefName]) {
+        window[winRefName].focus();
+        return;
+      }
+
+      const gameWin = window.open();
+      gameWin.document.body.style.margin = '0';
+      gameWin.document.body.style.height = '100vh';
+
+      const iframe = gameWin.document.createElement('iframe');
+      iframe.style.border = 'none';
+      iframe.style.width = '100%';
+      iframe.style.height = '100%';
+      iframe.style.margin = '0';
+      iframe.src = url;
+
+      gameWin.document.body.appendChild(iframe);
+
+      const checkClose = setInterval(() => {
+        if (gameWin.closed) {
+          clearInterval(checkClose);
+          window[winRefName] = undefined;
+        }
+      }, 500);
+
+      window[winRefName] = gameWin;
+    }
+
+    document.getElementById('button1').onclick = () => openGame(url1, 'win1');
+    document.getElementById('button2').onclick = () => openGame(url2, 'win2');
+    document.getElementById('button3').onclick = () => openGame(url3, 'win3');
+    document.getElementById('button4').onclick = () => openGame(url4, 'win4');
+  </script>
+</body>
+</html>
