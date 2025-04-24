@@ -41,5 +41,5 @@ document.getElementById('button2').onclick = () => openGame(url2, 'win2');
 document.getElementById('button3').onclick = () => openGame(url3, 'win3');
 document.getElementById('button4').onclick = () => openGame(url4, 'win4');
 document.getElementById('button5').onclick = () => openGame(url5, 'win5');
-document.getElementById('button6').onclick = () => openGame(ur16, 'win6');
+document.getElementById('button6').onclick = () => openGame(url6, 'win6');
 
