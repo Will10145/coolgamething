@@ -4,7 +4,7 @@ const url3 = "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=ht
 const url4 = "https://geometry.monster";
 const url5 = "https://serve.gamejolt.net/190223b04e193c0ce0f4c7b9f1bbfd7332533bdc0fcb22d08618d23dbadfa01c,1745605068,7/data/games/15/177/956177/files/6787d14f5ab77/index.html?gjapi_username=Goldcrescent&gjapi_token=WAyjCh";
 
-let win1, win2, win3, win4;
+let win1, win2, win3, win4, win5;
 
 function openGame(url, winRefName) {
   if (window[winRefName]) {
