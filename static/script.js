@@ -4,7 +4,7 @@ const url3 = "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=ht
 const url4 = "https://geometry.monster";
 const url5 = "https://serve.gamejolt.net/190223b04e193c0ce0f4c7b9f1bbfd7332533bdc0fcb22d08618d23dbadfa01c,1745605068,7/data/games/15/177/956177/files/6787d14f5ab77/index.html?gjapi_username=Goldcrescent&gjapi_token=WAyjCh";
 
-let win1, win2, win3, win4, win5;
+let win1, win2, win3, win4, win5, win6;
 
 function openGame(url, winRefName) {
   if (window[winRefName]) {
@@ -40,3 +40,5 @@ document.getElementById('button2').onclick = () => openGame(url2, 'win2');
 document.getElementById('button3').onclick = () => openGame(url3, 'win3');
 document.getElementById('button4').onclick = () => openGame(url4, 'win4');
 document.getElementById('button5').onclick = () => openGame(url5, 'win5');
+document.getElementById('button16').onclick = () => openGame(url16, 'win6');
+
