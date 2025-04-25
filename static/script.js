@@ -3,11 +3,10 @@ const url2 = "https://AeAjHAHiVpRkwZeZZbsZn9Fv-opensocial.googleusercontent.com/
 const url3 = "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/RobiFet/workflow@60b41ef8c9123ae41b86bf04c9b39e1a5713aaa9/bin/gs.xml&container=ig";
 const url4 = "https://geometry.monster";
 const url5 = "https://serve.gamejolt.net/190223b04e193c0ce0f4c7b9f1bbfd7332533bdc0fcb22d08618d23dbadfa01c,1745605068,7/data/games/15/177/956177/files/6787d14f5ab77/index.html?gjapi_username=Goldcrescent&gjapi_token=WAyjCh";
-const url6 = "https://xbox.com/en-us/play";
-const url7 = "https://1v1.lol";
-const url8 = "https://google.com";
+const url6 = "https://1v1.lol";
 
-let win1, win2, win3, win4, win5, win6, win7, win8;
+
+let win1, win2, win3, win4, win5, win6;
 
 function openGame(url, winRefName) {
   if (window[winRefName]) {
@@ -44,6 +43,5 @@ document.getElementById('button3').onclick = () => openGame(url3, 'win3');
 document.getElementById('button4').onclick = () => openGame(url4, 'win4');
 document.getElementById('button5').onclick = () => openGame(url5, 'win5');
 document.getElementById('button6').onclick = () => openGame(url6, 'win6');
-document.getElementById('button7').onclick = () => openGame(url7, 'win7');
-document.getElementById('button8').onclick = () => openGame(url8, 'win8');
+
 
