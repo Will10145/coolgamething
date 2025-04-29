@@ -3,7 +3,7 @@ const gameURLs = {
   button2: "https://AeAjHAHiVpRkwZeZZbsZn9Fv-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/sk1bx/version@0d8fb9c7430567ed0900902593eee6ba2ba8d297/ts3.xml&container=ig",
   button3: "/static/gunspin/gunspin.json",
   button4: "https://geometry.monster",
-  button5: "https://serve.gamejolt.net/190223b04e193c0ce0f4c7b9f1bbfd7332533bdc0fcb22d08618d23dbadfa01c,1745605068,7/data/games/15/177/956177/files/6787d14f5ab77/index.html?gjapi_username=Goldcrescent&gjapi_token=WAyjCh",
+  button5: "https://serve.gamejolt.net/01ba4fd8a27d6efef2aec397f6ceacf76dfe9b83dfb730b8cb517009914b9ae3,1745994905,7/data/games/15/177/956177/files/6787d14f5ab77/index.html?gjapi_username=Goldcrescent&gjapi_token=WAyjChN",
   button6: "https://1v1.lol"
 };
 
